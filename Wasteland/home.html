@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pustkowia</title>
+    <link rel="stylesheet" href="styleHome.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="index/images/vaultlogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script>
+
+        function latarka(event) {
+            var swiatlo = document.getElementsByClassName("swiatlo")[0];
+            swiatlo.style.clipPath = `circle(85px at ${event.offsetX}px ${event.offsetY}px)`;
+
+        }
+
+        $(document).ready(function () {
+            $('#hero-btn').hide().delay(3000).fadeIn(2200);
+        });
+
+        $(window).on('load', function () {
+            $("#cover").fadeOut(3000);
+        });
+
+        function muzyka() {
+            var audio = new Audio('index/images/theme.mp3');
+            audio.play();
+            muzyka = function () { };
+        };
+
+
+        function Navarro() {
+            muzyka();
+            alert("Przed wojną Navarro służyło jako rafineria Poseidon Oil. Obok instalacji naftowych zbudowano finansowaną przez rząd bazę wojskową, wraz ze stacją łącza satelitarnego oraz zapleczem konserwacyjnym i naprawczym. Ponad sto lat po Wielkiej Wojnie baza była używana przez Enklawę, która przekształciła ją w swoją główną placówkę na kontynencie, ustanawiając miejsce do tankowania i utrzymania swoich Vertibirdów . Ze względu na ograniczony zasięg Vertibirda, a także częste awarie, zwłaszcza w warunkach powojennych, schematy Vertibirda prawie zawsze były dostępne na miejscu w celu przeprowadzenia niezbędnych napraw i konserwacji, ale były podatne na zgubienie. Do 2242, Navarro było wciąż stosunkowo nową bazą, bez pełnego komplementu ze strony personelu. Zamienniki zostały przeniesione do bazy z innych, mniejszych instalacji na kontynencie.")
+            if (confirm("Stoisz przed wielką bazą wojskową w Navarro. Jedyną opcją wejścia za najeżone wieżyczkami mury, to zostanie najemnikiem na usługach armii Enklawy. Opłata za rozmowe z sierżantem wynosi dokładnie całość twoich pieniędzy w kieszeni. Czy chcesz kandydować ?")) {
+                alert("Podróż wyczerpała Twoje zapasy jedzenia i picia. Oblałeś testy sprawnościowe, dlatego trafiasz do drugiej tury. Kolejny etap za tydzień.  Tymczasem Ty wciąż jesteś bez dachu nad głową i  dodatkowo bez pieniędzy... Wracasz na pustkowia.");
+            } else {
+                alert("Przychodząc od strony pustkowii, gdzie na ludzi grasują mutanty, zrobiłeś wielkie wrażenie na sierżancie. Miałeś prawie pewne szanse na zostanie jednych z nich, jednak zrezygnowałeś. Sierżant polecił Ci udać sie na wschód, znajdują się tam bezpieczne schrony przeciwatomowe do zamieszkania.");
+            }
+            Navarro = function () { };
+        }
+
+        function SanFrancisco() {
+            alert("Nawet przed wojną San Francisco było uważane za „dziwne” miasto. Najwyraźniej został również mocno dotknięty podczas Wielkiej Wojny, ponieważ większość miasta jest ruiną. Miasto zostało ponownie założone po wojnie przez chińskich okrętów podwodnych, które dryfowały do ​​portu w San Francisco po tym, jak ich łódź podwodna, Shih-huang-ti , uległa awarii systemu w wyniku wojny atomowej. Shi wyskoczyli i rozpoczęli odbudowę miasta za pomocą niewielu ocalałych, których mieli, złomując swoją łódź podwodną na plaży, aby stworzyć Stalowy Pałac.");
+            if (confirm("By swobodnie przemieszczać się po San Francisco, musisz posiadać status obywatela. Niestety prawo zakazuje przyjmowania 'dzikusów' z pustkowii. Możesz jednak ubiegać sie o pracę dla lokalnych łowców niewolników. Czy chcesz do nich dołączyć?")) {
+                alert("Po wypaleniu znaku gildii łowców niewolników na ramieniu, dostajesz już pierwsze zlecenie. Jest to wyprawa do Krypty Swoszowice. Dostajesz prowiant, strzelbę i amunicję. Wyruszasz w grupie trzech doświadczonych łowców, jutro o świcie.");
+            } else {
+                alert("Łowcy mierzą Cię wzrokiem... ");
+                alert("Powoli Cię okrążając...")
+                alert("Lądujesz w kamieniołomie, gdzie po ataku zmutowanych kretoszczurów, giniesz od ran kłutych.")
+                window.location.reload();
+            }
+            SanFrancisco = function () { };
+        }
+    </script>
+</head>
+<body>
+    <div id="cover">Znajdź schronienie na pustkowiach</div>
+    <section class="header" onmousemove="latarka(event)" onclick="muzyka()">
+        <div class="labels" onmousemove="latarka(event)">
+            <div class="swiatlo" onmousemove="latarka(event)">
+                <a class="hero-btn1" onmousemove="latarka(event)" href="index/index.html">Krypta Swoszowice</a>
+                <a class="hero-btn2" onmousemove="latarka(event)" onclick="Navarro()">Navarro</a>
+                <a class="hero-btn3" onmousemove="latarka(event)" onclick="SanFrancisco()">San Francisco</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

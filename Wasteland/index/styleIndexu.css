@@ -1,0 +1,458 @@
+﻿* {
+    margin: 0;
+    background-color: black;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*--------------------------------------------*/
+.header {
+    height: 100vh;
+    width: 100%;
+    background: url(images/wejscie.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.nav {
+    display: block;
+    padding: 5%, 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: block;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 30px;
+            cursor: default;
+            transition: 2s;
+        }
+
+    .nav-links a::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+@media(max-width:700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #000000;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
+
+.miniaturki {
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.miniaturki-col {
+    flex-basis: 31%;
+    background: url(images/texture.jpg);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.leaflet {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 20px;
+}
+
+    .leaflet img {
+        border-radius: 10px;
+    }
+
+    .leaflet .miniaturki h4, h1 {
+        color: black;
+        background-color: transparent;
+    }
+
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+.infra {
+    margin-top: 20px;
+    width: 75%;
+    background-color: black;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+    .campus-col img {
+        width: 100%;
+        display: block;
+        border-radius: 20px;
+    }
+
+.infra h1 {
+    color: black;
+    background: url(images/texture.jpg);
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+    .layer:hover {
+        background: rgba(177, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+
+    .layer h3 {
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .layer:hover h3 {
+        bottom: 49%;
+        opacity: 1;
+        background-color: transparent;
+    }
+
+.opis {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.opis-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+    .opis-col img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .opis-col p {
+        padding: 0;
+        color: white;
+    }
+
+    .opis-col h3 {
+        margin-top: 16px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+@media(max-width: 700px) {
+    .testimonials-col img {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: black;
+}
+
+    .footer #h4 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-weight: 600;
+        color: white;
+        transition: 1s;
+    }
+
+        .footer #h4:hover {
+            color: darkred;
+            transform: scale(1.5);
+            transition: 1s;
+        }
+
+
+.zdjecia {
+    background-color: black;
+    margin-top: 20px;
+}
+
+    .zdjecia .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0 3px;
+    }
+
+
+    .zdjecia .column {
+        -ms-flex: 49%;
+        flex: 50%;
+        max-width: 49%;
+        padding: 2px 4px;
+    }
+
+    .zdjecia h1 {
+        width: 40%;
+        margin: auto;
+        text-align: center;
+        text-align: center;
+        background: #bdbcbc;
+        border-radius: 10px;
+        padding: 20px 12px;
+        box-sizing: border-box;
+    }
+
+    .zdjecia .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        border-radius: 20px;
+        transition: 1s;
+    }
+
+        .zdjecia .column img:hover {
+            transform: scale(1.01);
+            transition: 1s;
+        }
+
+@media screen and (max-width: 600px) {
+    .zdjecia .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        margin-top: 30px;
+        background-color: transparent;
+        color: #bcbcbc;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+    .sidenav .closebtn {
+        position: relative;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 0;
+        color: transparent;
+    }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.wybor {
+    background-color: black;
+}
+
+.vertical-divider {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    background-color: black;
+}
+
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: black;
+    flex: 2;
+}
+
+    .container h1{
+        margin-top: 40px;
+        color: white;
+        background-color: transparent
+    }
+
+    .container > .item1 {
+        display: flex;
+        flex-flow: column;
+        justify-content: left;
+        transition: 1s;
+        max-width: 50%;
+        padding-top: 24px;
+        padding-left: 12px;
+        min-width: 10%;
+        flex: 1;
+        text-align: left;
+        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/jednoosobowa.jpg) center;
+        background-size: cover;
+        border-radius: 50px;
+    }
+
+        .container > .item1 .item2 .item3 h1, p {
+            color: white;
+            background-color: transparent
+        }
+
+        .container > .item1:hover {
+            transition: 1s;
+            max-width: 80% !important;
+            background: #333;
+            flex: 4;
+            cursor: pointer;
+            color: #fff;
+            background: url(images/jednoosobowa.jpg) center;
+            background-size: cover;
+        }
+
+    .container > .item2 {
+        display: flex;
+        flex-flow: column;
+        justify-content: left;
+        transition: 1s;
+        max-width: 50%;
+        padding-top: 24px;
+        padding-left: 12px;
+        min-width: 10%;
+        flex: 1;
+        text-align: left;
+        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/dwuosobowy.png) center;
+        background-size: cover;
+        border-radius: 50px;
+    }
+
+        .container > .item2:hover {
+            transition: 1s;
+            max-width: 80% !important;
+            background: #333;
+            flex: 4;
+            cursor: pointer;
+            color: #fff;
+            background: url(images/dwuosobowy.png) center;
+            background-size: cover;
+        }
+
+    .container > .item3 {
+        display: flex;
+        flex-flow: column;
+        justify-content: left;
+        transition: 1s;
+        max-width: 50%;
+        padding-top: 24px;
+        padding-left: 12px;
+        min-width: 10%;
+        flex: 1;
+        text-align: left;
+        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/rodzinny.jpg) center;
+        background-size: cover;
+        border-radius: 50px;
+    }
+
+        .container > .item3:hover {
+            transition: 1s;
+            max-width: 80% !important;
+            flex: 4;
+            cursor: pointer;
+            color: #fff;
+            background: url(images/rodzinny.jpg) center;
+            background-size: cover;
+        }
